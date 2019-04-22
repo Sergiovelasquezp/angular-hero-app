@@ -1,0 +1,21 @@
+<div class="card text-center">
+  <img [src]="heroe.img" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title ">{{ heroe.nombre }}</h5>
+    <hr />
+    <p class="card-text">
+      {{ heroe.bio }}
+    </p>
+    <p class="card-text">
+      <small>Primera aparicion: {{ heroe.aparicion }}</small>
+    </p>
+    <hr />
+    <button
+      (click)="verHeroe()"
+      type="button"
+      class="btn btn-outline-primary btn-block"
+    >
+      ver mas...
+    </button>
+  </div>
+</div>

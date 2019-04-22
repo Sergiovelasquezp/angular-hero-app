@@ -1,0 +1,37 @@
+<div class="container-fluid animated fadeIn fast">
+  <h1 class="display-1">{{ heroe.nombre | uppercase }}</h1>
+  <hr />
+  <div class="row">
+    <div class="col md-4 text-center">
+      <img
+        [src]="heroe.img"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+        alt="{{ heroe.nombre }}"
+      />
+      <div class="mt-3">
+        <a routerLink="/heroes" href="#" class="btn btn-outline-info btn-block "
+          >Regresar</a
+        >
+      </div>
+    </div>
+    <div class="col md-8">
+      <h2 class="display-4">{{ heroe.nombre }}</h2>
+      <hr />
+      <p class="lead">{{ heroe.bio }}</p>
+      <p>
+        <small>Año de aparocion: {{ heroe.aparicion | date: "y" }}</small>
+      </p>
+      <hr />
+      <div *ngIf="heroe.casa === 'Marvel'">
+        <img
+          src="assets/image/marvel-logo.png"
+          alt=""
+          style="max-width:10em; "
+        />
+      </div>
+      <div *ngIf="heroe.casa === 'DC'">
+        <img src="assets/image/dc-logo.png" alt="" style="max-width:10em; " />
+      </div>
+    </div>
+  </div>
+</div>

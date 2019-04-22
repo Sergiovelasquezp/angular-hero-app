@@ -1,0 +1,10 @@
+<div class="container-fluid animated fadeIn fast">
+  <div class="card-columns">
+    <!-- *ngFor="let heroe of heroes; let i = index" -->
+    <app-tarjetas
+      [idx]="i"
+      [heroe]="heroe"
+      *ngFor="let heroe of heroes; let i = index"
+    ></app-tarjetas>
+  </div>
+</div>
